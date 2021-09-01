@@ -1,0 +1,11 @@
+{
+  "main": "src/main.js",
+  "scripts": {
+    "start": "concurrently \"tsc src/main.ts -w\"  \"cross-env NODE_ENV=dev nodemon --watch main.js --exec 'electron .'\"",
+    "build": "tsc src/main.ts --outDir build --allowJs && cp src/preload.js ./build/"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "concurrently": "^6.2.1"
+  }
+}
