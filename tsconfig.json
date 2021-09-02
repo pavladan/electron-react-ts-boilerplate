@@ -21,6 +21,6 @@
   },
   "include": [
     "frontend/src",
-    "electron/src/main.ts"
+    "electron/src"
   ]
 }
