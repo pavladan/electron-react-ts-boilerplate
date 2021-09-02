@@ -1,4 +1,4 @@
-import { BrowserWindow, app, ipcMain, IpcMessageEvent } from "electron";
+import { BrowserWindow, app, ipcMain } from "electron";
 import * as isDev from "electron-is-dev";
 import * as path from "path";
 
@@ -8,7 +8,7 @@ function createWindow() {
     width: 900,
     height: 680,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      preload: path.join(__dirname, "../assets/preload.js"),
       nativeWindowOpen: true,
       devTools: isDev,
     },

@@ -6,10 +6,8 @@
   "scripts": {
     "start-electron": "wait-on http://localhost:3000 && yarn --cwd electron start",
     "start-frontend": "cross-env BROWSER=none yarn --cwd frontend react-start",
-    "react-prebuild": "cross-env cp electron/src/*.js frontend/build/",
     "electron-build": "electron-builder",
     "build": "yarn --cwd electron build && yarn --cwd frontend react-build && yarn electron-build",
-    "release": "yarn react-prebuild && yarn react-build && electron-builder --publish=always",
     "install": "yarn install --cwd frontend && yarn install --cwd electron"
   },
   "repository": {
