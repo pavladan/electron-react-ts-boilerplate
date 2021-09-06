@@ -8,7 +8,7 @@ function createWindow() {
     width: 900,
     height: 680,
     webPreferences: {
-      preload: path.join(__dirname, "../assets/preload.js"),
+      preload: path.join(__dirname, isDev ? "../assets/preload.js" : "./assets/preload.js"),
       nativeWindowOpen: true,
       devTools: isDev,
     },

@@ -1,7 +1,7 @@
 {
   "main": "src/main.js",
   "scripts": {
-    "start": "concurrently \"tsc src/*.ts -w\"  \"cross-env NODE_ENV=dev nodemon --watch src/*.js --exec 'electron .'\"",
+    "start": "concurrently \"tsc src/*.ts -w\"  \"cross-env NODE_ENV=dev nodemon --watch src --exec 'electron .'\"",
     "build": "tsc src/**.ts --outDir build --allowJs && cross-env cp -R assets build"
   },
   "devDependencies": {

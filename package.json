@@ -21,7 +21,7 @@
     "productName": "My Application",
     "copyright": "Copyright © 2021 pavladan",
     "files": [
-      "electron/build/*.js",
+      "electron/build/**/*.js",
       {
         "from": "frontend/build",
         "to": "electron/build"
