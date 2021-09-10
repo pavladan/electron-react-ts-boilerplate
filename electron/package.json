@@ -1,11 +1,14 @@
 {
-  "main": "src/main.js",
+  "main": "build/main.js",
   "scripts": {
-    "start": "concurrently \"tsc src/*.ts -w\"  \"cross-env NODE_ENV=dev nodemon --watch src --exec 'electron .'\"",
-    "build": "tsc src/**.ts --outDir build --allowJs && cross-env cp -R assets build"
+    "start": "tsc && concurrently \"tsc -w\" \"cross-env NODE_ENV=dev nodemon --watch build --exec 'electron .'\"",
+    "build": "tsc && cross-env cp -R assets build"
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
     "concurrently": "^6.2.1"
+  },
+  "dependencies": {
+    "electron-is-dev": "^2.0.0"
   }
 }

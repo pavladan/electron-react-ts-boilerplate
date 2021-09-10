@@ -1,6 +1,6 @@
 import { BrowserWindow, app, ipcMain } from "electron";
-import * as isDev from "electron-is-dev";
-import * as path from "path";
+import isDev from "electron-is-dev";
+import path from "path";
 
 let mainWindow: BrowserWindow;
 function createWindow() {
